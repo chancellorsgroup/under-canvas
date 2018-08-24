@@ -4,7 +4,7 @@
 
 `Canvas` can be extremely powerful when it comes to manipulating images, but there's a lot of complexity just to perform seemingly easy tasks.
 
-**Under Canvas** makes it incredibly simple to generate image previews (thumbnails) with some additional helpers to make it easy to source the image.
+**Under Canvas** makes it incredibly simple to generate image previews (thumbnails) from a number of different sources.
 
 The function returns a `Promise` which resolves to `base64` data URI.
 
