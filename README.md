@@ -10,8 +10,13 @@ The function returns a `Promise` which resolves to `base64` data URI.
 
 ## Installation
 
-```js
+```sh
 $ npm install --save under-canvas
+```
+
+### ES6 import:
+```js
+import underCanvas from 'under-canvas';
 ```
 
 Alternatively, you can use it directly in the browser:
@@ -20,13 +25,19 @@ Alternatively, you can use it directly in the browser:
 <script type='http://unpkg.com/under-canvas'></script>
 ```
 
-## Browser Usage
+`underCanvas` is attached to the window:
+
+```js
+window.underCanvas()
+```
+
+## Usage
+
+
 
 ### External URL
 
 ```js
-import underCanvas from 'under-canvas';
-
 underCanvas('http://localhost:8080/image.jpg').then((b64) => {
   const img = document.createElement('img');
   img.src = b64;
