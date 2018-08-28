@@ -4,9 +4,9 @@
 
 `Canvas` can be extremely powerful when it comes to manipulating images, but there's a lot of complexity just to perform seemingly easy tasks.
 
-**Under Canvas** makes it incredibly simple to generate image previews (thumbnails) from a number of different sources.
+**Under Canvas** makes it incredibly effortless to generate image previews from a number of different sources.
 
-The function returns a `Promise` which resolves to `base64` data URI.
+The function returns a `Promise`, which resolves to `base64` data URI.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Alternatively, you can use it directly in the browser:
 <script type='http://unpkg.com/under-canvas'></script>
 ```
 
-`underCanvas` is attached to the window:
+`underCanvas` is directly attached to the window:
 
 ```js
 window.underCanvas()
@@ -54,3 +54,14 @@ underCanvas('data:image/png;base64,...').then((b64) => {
   document.getElementById('root').appendChild(img);
 })
 ```
+
+## Planned features
+
+- Custom thumbnail sizes
+- Generating previews from `input[type=file]`
+- Detect browser support for `Canvas`
+- `nodeJS` support using `node-canvas`
+
+## Contributing
+
+Contributions are certainly welcome. Please take a look at any [existing issues](https://github.com/njbmartin/preview-image/issues).
