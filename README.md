@@ -2,6 +2,10 @@
 
 > Plain sailing image previews, powered by canvas.
 
+
+[![GitHub issues](https://img.shields.io/github/issues/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/issues)
+[![GitHub license](https://img.shields.io/github/license/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/blob/master/LICENSE)
+
 `Canvas` can be extremely powerful when it comes to manipulating images, but there's a lot of complexity just to perform seemingly easy tasks.
 
 **Under Canvas** makes it incredibly effortless to generate image previews from a number of different sources.
@@ -33,9 +37,9 @@ window.underCanvas()
 
 ## Usage
 
-
-
 ### External URL
+
+> Note that manipulating images from a remote source requires `Access-Control-Allow-Origin` to be set.
 
 ```js
 underCanvas('http://localhost:8080/image.jpg').then((b64) => {

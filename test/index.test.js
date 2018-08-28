@@ -1,8 +1,6 @@
 import path from 'path';
 import puppeteer from 'puppeteer';
 
-import preview from '../src';
-
 let page;
 let browser;
 
@@ -18,16 +16,16 @@ describe('preview-image', () => {
   });
 
   afterEach(async () => {
-    // browser.close();
+    browser.close();
   });
 
-  it('errors if the image file does not exist', async () => {
+  it.skip('errors if the image file does not exist', async () => {
     const image = await page.evaluate(() => window.UnderCanvas('http://localhost:8080/test.png'));
     console.log(image);
     await expect(image).toEqual();
   });
 
-  it('handles a file upload', async () => {
+  it.skip('handles a file upload', async () => {
     const filePath = path.relative(process.cwd(), path.resolve(__dirname, 'test.png'));
     const input = await page.$('input');
     await input.uploadFile(filePath);
