@@ -19,9 +19,8 @@ describe('preview-image', () => {
     browser.close();
   });
 
-  it.skip('errors if the image file does not exist', async () => {
+  it('errors if the image file does not exist', async () => {
     const image = await page.evaluate(() => window.UnderCanvas('http://localhost:8080/test.png'));
-    console.log(image);
     await expect(image).toEqual();
   });
 
