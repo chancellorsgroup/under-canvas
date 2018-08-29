@@ -2,9 +2,11 @@
 
 > Plain sailing image previews, powered by canvas.
 
-
+![npm](https://img.shields.io/npm/v/under-canvas.svg)
+[![CircleCI](https://img.shields.io/circleci/project/github/njbmartin/preview-image.svg)](https://circleci.com/gh/njbmartin/preview-image)
 [![GitHub issues](https://img.shields.io/github/issues/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/issues)
 [![GitHub license](https://img.shields.io/github/license/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/njbmartin/preview-image.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnjbmartin%2Fpreview-image)
 
 `Canvas` can be extremely powerful when it comes to manipulating images, but there's a lot of complexity just to perform seemingly easy tasks.
 
