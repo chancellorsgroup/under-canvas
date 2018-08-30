@@ -8,11 +8,15 @@
 [![GitHub license](https://img.shields.io/github/license/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/njbmartin/preview-image.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnjbmartin%2Fpreview-image)
 
+---
+
 `Canvas` can be extremely powerful when it comes to manipulating images, but there's a lot of complexity just to perform seemingly easy tasks.
 
 **Under Canvas** makes it incredibly effortless to generate image previews from a number of different sources.
 
 The function returns a `Promise`, which resolves to `base64` data URI.
+
+---
 
 ## Installation
 
@@ -36,6 +40,8 @@ Alternatively, you can use it directly in the browser:
 ```js
 window.underCanvas()
 ```
+
+---
 
 ## Usage
 
@@ -61,9 +67,54 @@ underCanvas('data:image/png;base64,...').then((b64) => {
 })
 ```
 
+## API Usage
+
+### underCanvas(*image*, *[options]*)
+
+Returns a `Promise` which resolves a `base64` string of the preview.
+
+#### format
+
+Type: `string`
+Default: `image/png`
+
+Format of the image to export.
+
+> Supports a number of different image formats (dependant on browser). eg. `image/jpeg` and `image/png` are supported by all browsers, but **Chrome** also supports `image/webp`.
+
+#### quality
+
+Type: `number`
+Default: `0.9`
+
+#### width
+
+Type: `number`
+
+Width of the exported image.
+
+> Defaults to original size.
+
+#### height
+
+Type: `number`
+
+Height of the exported image.
+
+> Defaults to original size.
+
+#### crop
+
+Type: `boolean`
+Default: `false`
+
+Resizes the image to fill the size and crops excess edges.
+
+> By default, the original image will be resized to fit within the specified size, ensuring the image is fully visible and no cropping occurs. If crop is set to `true`, the image will be resized to ensure that the width and height are greater than or equal to the expected size.
+
+
 ## Planned features
 
-- Custom thumbnail sizes
 - Generating previews from `input[type=file]`
 - Detect browser support for `Canvas`
 - `nodeJS` support using `node-canvas`

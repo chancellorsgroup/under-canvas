@@ -4,6 +4,7 @@ const defaultOptions = {
   width: null,
   height: null,
   target: null,
+  crop: false,
 };
 
 const getImage = source => new Promise((resolve, reject) => {
@@ -21,34 +22,51 @@ const UnderCanvas = (source = null, options = defaultOptions) => {
     const ctx = canvas.getContext('2d');
     canvas.width = opts.width || image.width;
     canvas.height = opts.height || image.height;
-    let clipX = 0;
-    let clipY = 0;
+
+    let posX = 0;
+    let posY = 0;
     let cropW = canvas.width;
     let cropH = canvas.height;
-    if (image.width > image.height) {
-      const scale = (image.width / image.height);
-      cropW = canvas.width * scale;
-      clipX = (image.width - image.height) / 2;
-    } else if (image.width < image.height) {
-      const scale = (image.height / image.width);
-      cropH = canvas.height * scale;
-      clipY = (image.height - image.width) / 2;
+
+    const heightScale = image.height / canvas.height;
+    const widthScale = image.width / canvas.width;
+
+    // ensure the image fits
+    if (opts.crop) {
+      if (widthScale < heightScale) {
+        cropW = canvas.width;
+        cropH = image.height / widthScale;
+        posY = (canvas.height - cropH) / 2;
+      } else if (widthScale > heightScale) {
+        cropH = canvas.height;
+        cropW = image.width / heightScale;
+        posX = (canvas.width - cropW) / 2;
+      }
+    } else if (widthScale > heightScale) {
+      cropW = canvas.width;
+      cropH = image.height / widthScale;
+      posY = (canvas.height - cropH) / 2;
+    } else if (widthScale < heightScale) {
+      cropH = canvas.height;
+      cropW = image.width / heightScale;
+      posX = (canvas.width - cropW) / 2;
     }
+
 
     ctx.drawImage(
       image,
-      clipX,
-      clipY,
+      0,
+      0,
       image.width,
       image.height,
-      image.x || 0,
-      image.y || 0,
+      posX,
+      posY,
       cropW,
       cropH,
     );
 
     if (opts.target) {
-      document.getElementById(opts.target).appendChild(canvas);
+      document.getElementById(opts.target).appendChild(image);
     }
     return canvas.toDataURL(opts.format, opts.quality);
   });

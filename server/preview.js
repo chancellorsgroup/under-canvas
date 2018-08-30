@@ -3,7 +3,9 @@ document.getElementById('image').addEventListener('change', (el) => {
   const reader = new FileReader();
   reader.onload = (event) => {
     const url = event.target.result;
-    window.UnderCanvas(url, { width: 400, height: 400, target: 'canvas' }).then((b64) => {
+    window.UnderCanvas(url, {
+      width: 190, height: 256, crop: true,
+    }).then((b64) => {
       const img = document.createElement('img');
       img.src = b64;
       document.getElementById('root').appendChild(img);

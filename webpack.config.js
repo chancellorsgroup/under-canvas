@@ -11,7 +11,7 @@ module.exports = {
     libraryExport: 'default',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'test'),
+    contentBase: path.join(__dirname, 'server'),
     compress: true,
     port: 9000,
   },
