@@ -2,7 +2,7 @@
 
 > Plain sailing image previews, powered by canvas.
 
-![npm](https://img.shields.io/npm/v/under-canvas.svg)
+[![npm](https://img.shields.io/npm/v/under-canvas.svg)](https://www.npmjs.com/package/under-canvas)
 [![CircleCI](https://img.shields.io/circleci/project/github/njbmartin/preview-image.svg)](https://circleci.com/gh/njbmartin/preview-image)
 [![GitHub issues](https://img.shields.io/github/issues/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/issues)
 [![GitHub license](https://img.shields.io/github/license/njbmartin/preview-image.svg)](https://github.com/njbmartin/preview-image/blob/master/LICENSE)
