@@ -3,9 +3,9 @@
 > Plain sailing image previews, powered by canvas.
 
 [![npm](https://img.shields.io/npm/v/under-canvas.svg)](https://www.npmjs.com/package/under-canvas)
-[![CircleCI](https://img.shields.io/circleci/project/github/chancellorsgroup/under-canvas.svg)](https://circleci.com/gh/chancellorsgroup/under-canvas)
-[![GitHub issues](https://img.shields.io/github/issues/chancellorsgroup/under-canvas.svg)](https://github.com/chancellorsgroup/under-canvas/issues)
-[![GitHub license](https://img.shields.io/github/license/chancellorsgroup/under-canvas.svg)](https://github.com/chancellorsgroup/under-canvas/blob/master/LICENSE)
+[![CircleCI](https://img.shields.io/circleci/project/github/chancellorsgroup/under-canvas.svg)](https://circleci.com/gh/njbmartin/under-canvas)
+[![GitHub issues](https://img.shields.io/github/issues/chancellorsgroup/under-canvas.svg)](https://github.com/njbmartin/under-canvas/issues)
+[![GitHub license](https://img.shields.io/github/license/chancellorsgroup/under-canvas.svg)](https://github.com/njbmartin/under-canvas/blob/master/LICENSE)
 
 ---
 
@@ -20,10 +20,11 @@ The function returns a `Promise`, which resolves to `base64` data URI.
 ## Installation
 
 ```sh
-$ npm install --save under-canvas
+npm install --save under-canvas
 ```
 
-### ES6 import:
+### ES6 import
+
 ```js
 import underCanvas from 'under-canvas';
 ```
@@ -110,7 +111,6 @@ Default: `false`
 Resizes the image to fill the size and crops excess edges.
 
 > By default, the original image will be resized to fit within the specified size, ensuring the image is fully visible and no cropping occurs. If crop is set to `true`, the image will be resized to ensure that the width and height are greater than or equal to the expected size.
-
 
 ## Planned features
 
