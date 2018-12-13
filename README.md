@@ -3,9 +3,9 @@
 > Plain sailing image previews, powered by canvas.
 
 [![npm](https://img.shields.io/npm/v/under-canvas.svg)](https://www.npmjs.com/package/under-canvas)
-[![CircleCI](https://img.shields.io/circleci/project/github/chancellorsgroup/under-canvas.svg)](https://circleci.com/gh/njbmartin/under-canvas)
-[![GitHub issues](https://img.shields.io/github/issues/chancellorsgroup/under-canvas.svg)](https://github.com/njbmartin/under-canvas/issues)
-[![GitHub license](https://img.shields.io/github/license/chancellorsgroup/under-canvas.svg)](https://github.com/njbmartin/under-canvas/blob/master/LICENSE)
+[![CircleCI](https://img.shields.io/circleci/project/github/njbmartin/under-canvas.svg)](https://circleci.com/gh/njbmartin/under-canvas)
+[![GitHub issues](https://img.shields.io/github/issues/njbmartin/under-canvas.svg)](https://github.com/njbmartin/under-canvas/issues)
+[![GitHub license](https://img.shields.io/github/license/njbmartin/under-canvas.svg)](https://github.com/njbmartin/under-canvas/blob/master/LICENSE)
 
 ---
 
