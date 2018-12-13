@@ -1,10 +1,11 @@
 const defaultOptions = {
-  format: null,
-  quality: 0.9,
-  width: null,
-  height: null,
-  target: null,
+  background: 'white',
   crop: false,
+  format: null,
+  height: null,
+  quality: 0.9,
+  target: null,
+  width: null,
 };
 
 const getImage = source => new Promise((resolve, reject) => {
@@ -51,7 +52,8 @@ const UnderCanvas = (source = null, options = defaultOptions) => {
       cropW = image.width / heightScale;
       posX = (canvas.width - cropW) / 2;
     }
-
+    ctx.fillStyle = options.background;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.drawImage(
       image,
