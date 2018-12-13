@@ -73,6 +73,14 @@ underCanvas('data:image/png;base64,...').then((b64) => {
 
 Returns a `Promise` which resolves a `base64` string of the preview.
 
+#### background
+
+Type: `string`
+
+Background colour to use if not transparent. Useful when scaling to fit images.
+
+> Defaults to `transparent`.
+
 #### format
 
 Type: `string`

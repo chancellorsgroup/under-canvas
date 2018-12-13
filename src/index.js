@@ -1,5 +1,5 @@
 const defaultOptions = {
-  background: 'white',
+  background: null,
   crop: false,
   format: null,
   height: null,
@@ -52,8 +52,11 @@ const UnderCanvas = (source = null, options = defaultOptions) => {
       cropW = image.width / heightScale;
       posX = (canvas.width - cropW) / 2;
     }
-    ctx.fillStyle = options.background;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    if (options.background) {
+      ctx.fillStyle = options.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
 
     ctx.drawImage(
       image,
