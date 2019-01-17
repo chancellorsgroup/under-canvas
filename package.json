@@ -1,6 +1,6 @@
 {
   "name": "under-canvas",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Plain sailing image previews, powered by canvas.",
   "main": "dist/index.js",
   "scripts": {
