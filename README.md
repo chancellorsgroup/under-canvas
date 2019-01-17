@@ -9,6 +9,8 @@
 
 ---
 
+Have you ever wanted to preview an image before it gets uploaded? Or generate a thumbnail of an image on the fly?
+
 `Canvas` can be extremely powerful when it comes to manipulating images, but there's a lot of complexity just to perform seemingly easy tasks.
 
 **Under Canvas** makes it incredibly effortless to generate image previews from a number of different sources.
